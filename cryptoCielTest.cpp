@@ -20,4 +20,10 @@ int main()
 	monAES.LoadAESKeyFromFile("1clef_aes.txt");
 	monAES.EncryptFileAES256("1clef_aes.txt", "2sortie.txt");
 	monAES.DecryptFileAES256("2sortie.txt", "3decryptage.txt");
+
+	RsaGestion RSA;
+	RSA.generationClef("RSAPublic", "RSAPrive", 2048)
+	std
+
+
 }
