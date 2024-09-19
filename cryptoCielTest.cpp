@@ -2,14 +2,22 @@
 #include "RsaGestion.h"
 #include "Hashgestion.h"
 #include "AesGestion.h"
-#include <fstream>
 
 int main()
 {
-    HashGestion LM;
-    std::string File = "fichier.txt";
-    std::cout << "SHA256 Hash: " << LM.CalculateSHA256(File) << std::endl;
-    return(0);
 
 
+	std::string monMessageHash = "OUAAAA";
+
+
+
+	HashGestion LM;
+	std::cout << LM.CalculateSHA256(monMessageHash) << std::endl;
+
+	AesGestion monAES;
+	monAES.GenerateAESKey();
+	monAES.SaveAESKeyToFile("1clef_aes.txt");
+	monAES.LoadAESKeyFromFile("1clef_aes.txt");
+	monAES.EncryptFileAES256("1clef_aes.txt", "2sortie.txt");
+	monAES.DecryptFileAES256("2sortie.txt", "3decryptage.txt");
 }
