@@ -12,7 +12,7 @@ int main()
 	//RSA.generationClef("RSAPublicKey", "RSAPrivateKey", 2048);
 	RSA.chargementClefs("MatteoRSAPublic.pem", "RSAPrive.pem");
 	//RSA.chiffreDansFichier("RSASortie.txt", "RSAChiffre.txt");
-	RSA.dechiffrementFichier("MatteoRSAChiffre.txt", "RSADechiffre.txt", 2048);
+	RSA.dechiffrementFichier("MatteoRSAChiffre.txt", "RSADechiffre.txt");
 	
 	
 	
