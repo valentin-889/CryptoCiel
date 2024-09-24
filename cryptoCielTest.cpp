@@ -7,19 +7,20 @@
 int main()
 {
 
-	RsaGestion RSA;
-	
-	//RSA.generationClef("RSAPublicKey", "RSAPrivateKey", 2048);
-	RSA.chargementClefs("MatteoRSAPublic.pem", "RSAPrive.pem");
-	//RSA.chiffreDansFichier("RSASortie.txt", "RSAChiffre.txt");
-	RSA.dechiffrementFichier("MatteoRSAChiffre.txt", "RSADechiffre.txt");
-	
-	
+	AesGestion AES;
+	AES.GenerateAESKey();
+	AES.SaveAESKeyToFile("clesAES.txt")
 	
 
 }
 /*
 
+RsaGestion RSA;
+
+	//RSA.generationClef("RSAPublicKey", "RSAPrivateKey", 2048);
+	RSA.chargementClefs("MatteoRSAPublic.pem", "RSAPrive.pem");
+	//RSA.chiffreDansFichier("RSASortie.txt", "RSAChiffre.txt");
+	RSA.dechiffrementFichier("MatteoRSAChiffre.txt", "RSADechiffre.txt");
 
 std::string MessageEncrypt = "voiture sportive ";
 		std::string MessageCrypt = RSA.chiffrementRsa(MessageEncrypt);
